@@ -30,9 +30,6 @@ $(document).ajaxError(function(event, jqXHR, err){
     alert('Problem obtaining data: ' + jqXHR.statusText);
 });
 
-
-
-
 $(function(){
     //document is ready for manipulation
     $(".refresh-button").click(function(){
@@ -66,7 +63,7 @@ function getQuakes(minMagnitude) {
     	if(gov.usgs.quakes[idx].mapMarker){
        		gov.usgs.quakes[idx].mapMarker.setMap(null);
        	}
-     }
+    }
     $(".message").text("Displaying "+quakes.length+" earthquakes");
     buildMap();
     addQuakeMarkers(gov.usgs.quakes, gov.usgs.quakesMap);
